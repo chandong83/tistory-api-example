@@ -4,6 +4,7 @@ import json
 from bs4 import BeautifulSoup
 
 import app_config
+import utils
 
 origin = 'out'
 output_type = 'json' #'xml' xml 기능 구현 안됨
@@ -202,6 +203,8 @@ def blog_upload(blog_name, uploadedfile_path):
 
 
 if __name__ == '__main__':
+
+    utils.check_folder(origin)
     # 계정 블로그 정보들 읽기
     blog_info()
 
